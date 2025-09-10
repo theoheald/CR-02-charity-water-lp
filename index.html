@@ -19,6 +19,7 @@
       min-height: 100vh;
     }
 
+    /* Make the layout side-by-side on wider screens */
     @media (min-width: 768px) {
       .hero {
         flex-direction: row;
@@ -35,7 +36,7 @@
       justify-content: center;
     }
 
-    /* Headline text color changed to #fff7e1 */
+    /* Headline text color */
     .hero-text h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -44,7 +45,7 @@
       color: #fff7e1; /* Headline color */
     }
 
-    /* Subheadline (paragraph) text color changed to #fff7e1 */
+    /* Subheadline text color */
     .hero-text p {
       font-size: 1rem;
       margin-bottom: 2rem;
@@ -73,10 +74,11 @@
       background-color: #ffb700;
     }
 
-    /* Right image block */
+    /* Right image block uses your hero image */
     .hero-image {
       flex: 1;
-      background: url("https://via.placeholder.com/800x600") center center/cover no-repeat;
+      /* Use your image from the workspace img folder */
+      background: url("img/Madagascar_2019_CG-4009.jpg") center center/cover no-repeat;
       min-height: 300px;
     }
 
@@ -108,6 +110,7 @@
       <a href="#" class="cta-button">Add Your Drop</a>
     </div>
 
+    <!-- This div shows your hero image as the background -->
     <div class="hero-image"></div>
   </section>
 
