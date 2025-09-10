@@ -60,12 +60,15 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
       font-family: 'Avenir', Arial, sans-serif;
     }
 
+    /* More obvious hover effect for CTA button */
     .cta-button:hover {
-      background-color: #ffb700;
+      background-color: #2E9DF7; /* Change to brand blue on hover */
+      color: #fff;               /* Change text to white on hover */
+      box-shadow: 0 0 10px #2E9DF7, 0 0 20px #FFC907; /* Add a glow effect */
     }
 
     /* Right image block uses your hero image and a horizontal gradient overlay */
