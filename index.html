@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charity Water Landing Page</title>
   <style>
-    /* Use Avenir if available, otherwise fall back to Arial and sans-serif */
+    /* Set the main font for the page */
     body {
       margin: 0;
-      font-family: 'Avenir', Arial, sans-serif; /* Main font for the page */
+      font-family: 'Avenir', Arial, sans-serif;
       color: #fff;
     }
 
-    /* Container for left + right layout */
+    /* Main layout using flexbox for simplicity */
     .hero {
       display: flex;
       flex-direction: column;
@@ -25,7 +25,7 @@
       }
     }
 
-    /* Left content block */
+    /* Left content block with navy blue background */
     .hero-text {
       background-color: #003366; /* Navy blue */
       padding: 3rem 2rem;
@@ -35,23 +35,28 @@
       justify-content: center;
     }
 
+    /* Headline text color changed to #fff7e1 */
     .hero-text h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
       line-height: 1.2;
-      font-family: 'Avenir', Arial, sans-serif; /* Heading uses Avenir */
+      font-family: 'Avenir', Arial, sans-serif;
+      color: #fff7e1; /* Headline color */
     }
 
+    /* Subheadline (paragraph) text color changed to #fff7e1 */
     .hero-text p {
       font-size: 1rem;
       margin-bottom: 2rem;
       max-width: 400px;
-      font-family: 'Avenir', Arial, sans-serif; /* Paragraph uses Avenir */
+      font-family: 'Avenir', Arial, sans-serif;
+      color: #fff7e1; /* Subheadline color */
     }
 
+    /* CTA button with brand yellow and dark text */
     .cta-button {
-      background-color: #FFD000; /* Bright yellow */
-      color: #000;
+      background-color: #FFC907; /* Brand yellow */
+      color: #1a1a1a;            /* Dark text */
       border: none;
       padding: 1rem 2rem;
       font-size: 1.1rem;
@@ -61,7 +66,7 @@
       text-decoration: none;
       display: inline-block;
       transition: background-color 0.3s ease;
-      font-family: 'Avenir', Arial, sans-serif; /* Button uses Avenir */
+      font-family: 'Avenir', Arial, sans-serif;
     }
 
     .cta-button:hover {
