@@ -1,47 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Water Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    /* Container for left + right layout */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+      }
+    }
+
+    /* Left content block */
+    .hero-text {
+      background-color: #003366; /* Navy blue */
+      padding: 3rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 400px;
+    }
+
+    .cta-button {
+      background-color: #FFD000; /* Bright yellow */
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ffb700;
+    }
+
+    /* Right image block */
+    .hero-image {
+      flex: 1;
+      background: url("https://via.placeholder.com/800x600") center center/cover no-repeat;
+      min-height: 300px;
+    }
+
+    /* Logo area */
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    header img {
+      height: 30px;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <header>
+    <!-- Placeholder logo -->
+    <img src="https://via.placeholder.com/40x40" alt="Logo">
+    <h2>charity: water</h2>
+  </header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Safe Water<br>Starts With You.</h1>
+      <p>Giving takes just seconds, but the impact lasts a lifetime. Every drop you give creates ripples of change you can see in real time.</p>
+      <a href="#" class="cta-button">Add Your Drop</a>
+    </div>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+    <div class="hero-image"></div>
+  </section>
+
 </body>
 </html>
