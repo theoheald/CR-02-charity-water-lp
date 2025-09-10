@@ -20,33 +20,6 @@
       min-height: 100vh;
     }
 
-    /* Make the layout side-by-side on wider screens */
-    @media (min-width: 900px) {
-      .hero {
-        flex-direction: row;
-      }
-      .hero-text {
-        padding: 6rem 4rem; /* More padding for desktop */
-      }
-      .hero-text h1 {
-        font-size: 3rem; /* Larger headline for desktop */
-      }
-      .hero-text p {
-        font-size: 1.5rem; /* Larger paragraph for desktop */
-        max-width: 600px;
-      }
-      .cta-button {
-        font-size: 1.3rem; /* Larger button text for desktop */
-        padding: 1.2rem 2.5rem;
-      }
-      .hero-image {
-        min-height: 600px; /* Taller image for desktop */
-      }
-      header img {
-        height: 50px; /* Larger logo for desktop */
-      }
-    }
-
     /* Left content block with navy blue background */
     .hero-text {
       background-color: #003366; /* Navy blue */
@@ -95,10 +68,13 @@
       background-color: #ffb700;
     }
 
-    /* Right image block uses your hero image */
+    /* Right image block uses your hero image and a horizontal gradient overlay */
     .hero-image {
       flex: 1;
-      background: url("img/Madagascar_2019_CG-4009.jpg") center center/cover no-repeat;
+      /* The gradient fades from navy blue (left) to transparent (right), blending into the image */
+      background: 
+        linear-gradient(to right, #003366 0%, rgba(0,51,102,0.4) 15%, rgba(0,51,102,0.0) 35%),
+        url("img/Madagascar_2019_CG-4009.jpg") center center/cover no-repeat;
       min-height: 300px;
     }
 
@@ -114,6 +90,102 @@
       height: 30px;
       margin-right: 10px;
     }
+
+    /* ----------- MEDIA QUERIES FOR RESPONSIVE DESIGN ----------- */
+    /* Media queries help the page look good on all screen sizes */
+
+    /* For wider screens (desktop) */
+    @media (min-width: 900px) {
+      .hero {
+        flex-direction: row; /* Side by side layout */
+      }
+      .hero-text {
+        padding: 6rem 4rem; /* More padding for desktop */
+      }
+      .hero-text h1 {
+        font-size: 3rem; /* Larger headline for desktop */
+      }
+      .hero-text p {
+        font-size: 1.5rem; /* Larger paragraph for desktop */
+        max-width: 600px;
+      }
+      .cta-button {
+        font-size: 1.3rem; /* Larger button text for desktop */
+        padding: 1.2rem 2.5rem;
+      }
+      .hero-image {
+        min-height: 600px; /* Taller image for desktop */
+        /* Horizontal gradient for desktop, covers less of the image */
+        background: 
+          linear-gradient(to right, #003366 0%, rgba(0,51,102,0.3) 10%, rgba(0,51,102,0.0) 25%),
+          url("img/Madagascar_2019_CG-4009.jpg") center center/cover no-repeat;
+      }
+      header img {
+        height: 50px; /* Larger logo for desktop */
+      }
+    }
+
+    /* For tablets and small desktops */
+    @media (max-width: 1024px) {
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+      .hero-text p {
+        font-size: 1.1rem;
+        max-width: 400px;
+      }
+      .cta-button {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+      }
+      header img {
+        height: 40px;
+      }
+      .hero-image {
+        min-height: 300px;
+      }
+    }
+
+    /* For mobile devices and small screens */
+    @media (max-width: 900px) {
+      /* Stack hero sections vertically on mobile/tablet */
+      .hero {
+        flex-direction: column;
+      }
+      .hero-text {
+        padding: 2rem 1rem;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 1.5rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+      .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+      header {
+        padding: 1rem 1rem;
+      }
+      header img {
+        height: 30px;
+      }
+      .hero-image {
+        min-height: 200px;
+        /* Move the image down so the top is not covered by more than 5% */
+        background: 
+          linear-gradient(to bottom, #003366 0%, rgba(0,51,102,0.12) 6%, rgba(0,51,102,0.0) 15%),
+          url("img/Madagascar_2019_CG-4009.jpg") center 10%/cover no-repeat;
+        /* 'center 10%' moves the image down by 10% of its height */
+      }
+    }
+    /* ---------------------------------------------------------- */
+    /* These media queries make sure text and images scale well and fill space on all devices */
+    /* The gradient changes direction on mobile so it blends naturally with the image below the text */
   </style>
 </head>
 <body>
