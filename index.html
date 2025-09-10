@@ -10,6 +10,7 @@
       margin: 0;
       font-family: 'Avenir', Arial, sans-serif;
       color: #fff;
+      background-color: #003366; /* Fill empty space with navy blue */
     }
 
     /* Main layout using flexbox for simplicity */
@@ -20,9 +21,29 @@
     }
 
     /* Make the layout side-by-side on wider screens */
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       .hero {
         flex-direction: row;
+      }
+      .hero-text {
+        padding: 6rem 4rem; /* More padding for desktop */
+      }
+      .hero-text h1 {
+        font-size: 3rem; /* Larger headline for desktop */
+      }
+      .hero-text p {
+        font-size: 1.5rem; /* Larger paragraph for desktop */
+        max-width: 600px;
+      }
+      .cta-button {
+        font-size: 1.3rem; /* Larger button text for desktop */
+        padding: 1.2rem 2.5rem;
+      }
+      .hero-image {
+        min-height: 600px; /* Taller image for desktop */
+      }
+      header img {
+        height: 50px; /* Larger logo for desktop */
       }
     }
 
@@ -77,7 +98,6 @@
     /* Right image block uses your hero image */
     .hero-image {
       flex: 1;
-      /* Use your image from the workspace img folder */
       background: url("img/Madagascar_2019_CG-4009.jpg") center center/cover no-repeat;
       min-height: 300px;
     }
